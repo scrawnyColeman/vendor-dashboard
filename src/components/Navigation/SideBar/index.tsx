@@ -1,18 +1,14 @@
 import React from 'react'
-import { navLinks } from '../data/navLinks'
+import SideBarBody from '../SideBarBody'
+import SideBarHeader from '../SideBarHeader'
+import logo from '../../../assets/images/urbanbrews.png'
+import '../scss/style.scss'
 
 const SideBar: React.FC = (): JSX.Element => {
   return (
-    <div>
-      {navLinks.map((link: navLink) => {
-        const { path, label, icon } = link
-        return (
-          <div key={path}>
-            <div>{label}</div>
-            <div>{icon}</div>
-          </div>
-        )
-      })}
+    <div className="side-bar-container">
+      <SideBarHeader title="Urban Brews" icon={logo} />
+      <SideBarBody />
     </div>
   )
 }

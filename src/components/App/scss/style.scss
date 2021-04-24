@@ -1,5 +1,8 @@
-$red: red;
+@import '../../../constants/scss/measures.scss';
 
-h1 {
-  color: $red;
+.main-container {
+  position: fixed;
+  top: 0;
+  left: $sideNavWidth;
+  width: calc(100% - #{$sideNavWidth});
 }

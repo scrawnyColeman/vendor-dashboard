@@ -1,0 +1,45 @@
+@import '../../../constants/scss/measures.scss';
+
+.side-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: $sideNavWidth;
+  overflow: hidden;
+  color: #222;
+  border-right: 1px solid #ccc;
+}
+.side-bar-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $headerHeight;
+  width: 100%;
+  padding: $primaryHorizontalSpacing;
+}
+.side-bar-header-logo {
+  box-shadow: 0 0 4px 2px #ccc;
+  height: 100%;
+  width: 100%;
+}
+.side-bar-header-icon-wrapper {
+  height: calc(#{$headerHeight} / 2);
+  width: calc(#{$headerHeight} / 2);
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px #ccc;
+}
+.side-bar-header-company-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+.side-bar-body {
+  padding: $primaryVerticalSpacing $primaryHorizontalSpacing;
+  overflow-y: auto;
+  height: calc(100vh - #{$primaryVerticalSpacing} - #{$headerHeight});
+}
+
+.side-bar-logo-img {
+  height: calc(0.5 * #{$headerHeight});
+  width: calc(0.5 * #{$headerHeight});
+}
