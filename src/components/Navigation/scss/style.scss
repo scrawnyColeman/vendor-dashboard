@@ -16,7 +16,7 @@
   align-items: center;
   height: $headerHeight;
   width: 100%;
-  padding: $primaryHorizontalSpacing;
+  padding: $primaryVerticalSpacing $primaryHorizontalSpacing;
 }
 .side-bar-header-logo {
   box-shadow: 0 0 4px 2px #ccc;
@@ -42,4 +42,28 @@
 .side-bar-logo-img {
   height: calc(0.5 * #{$headerHeight});
   width: calc(0.5 * #{$headerHeight});
+}
+
+.side-bar-link-icon {
+  display: flex;
+  align-items: center;
+}
+.side-bar-link-label {
+  margin-left: calc(#{$primaryHorizontalSpacing / 2});
+  line-height: 100%;
+}
+.side-bar-link-wrapper {
+  &:not(:first-child) {
+    margin: $primaryVerticalSpacing 0;
+  }
+}
+.side-bar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #aeaeae;
+}
+
+.active-link {
+  color: #1e1e1e;
 }

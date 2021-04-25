@@ -7,8 +7,8 @@ import './scss/style.scss'
 const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <SideBar />
       <Router>
+        <SideBar />
         <div className="main-container">
           <Routing />
         </div>
