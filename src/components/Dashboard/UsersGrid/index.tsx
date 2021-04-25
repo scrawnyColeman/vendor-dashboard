@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import DataGrid from '../../UI/DataGrid'
-import { ColDef, ColGroupDef } from 'ag-grid-community'
+import { ColDef, ColGroupDef, GridApi } from 'ag-grid-community'
 import { transactionsData } from '../../../data/transactions'
-import { addSymToAmount } from '../../../utils'
+import { addSymToAmount, deepClone } from '../../../utils'
+import Button from '../../UI/Button'
+import { Hierarchy, Sizes } from '../../../constants/enums'
 
 interface RowData {
-  [key: string]: number | string | Date
+  [key: string]: number | string
 }
 
 const UsersGrid: React.FC = (): JSX.Element => {
   const [rowData, setRowData] = useState<RowData[]>([])
+  const [gridApi, setGridApi] = useState<GridApi>()
 
   useEffect(() => {
-    // fetch would go here
     const data = transactionsData.map((transaction: Transaction) => {
-      const { customer, date, ref, selectedReward, value } = transaction
+      const { customer, ref, selectedReward, value } = transaction
       const { email } = customer
       const { amount, currency } = value
       const { sym } = currency
@@ -23,12 +25,27 @@ const UsersGrid: React.FC = (): JSX.Element => {
         reference: ref,
         boost: selectedReward,
         amount: amount.toFixed(2),
-        date,
         sym,
       }
     })
     setRowData(data)
   }, [])
+
+  const filterOutSelectedAttr = (
+    attr: string,
+    val: number | string
+  ): RowData[] => {
+    const data = deepClone(rowData)
+    return data.filter((item: RowData) => item[attr] !== val)
+  }
+
+  const deleteRow = () => {
+    const selectedNode = gridApi?.getSelectedNodes() || []
+    const selectedReference = selectedNode[0]?.data.reference
+    if (selectedReference) {
+      setRowData(filterOutSelectedAttr('reference', selectedReference))
+    }
+  }
 
   const columnDefs: (ColDef | ColGroupDef)[] = [
     {
@@ -37,6 +54,7 @@ const UsersGrid: React.FC = (): JSX.Element => {
       filterParams: {
         filter: 'agNumberColumnFilter',
       },
+      checkboxSelection: true,
       valueFormatter: (params) => {
         const { value, data } = params
         const { sym } = data
@@ -68,7 +86,21 @@ const UsersGrid: React.FC = (): JSX.Element => {
   ]
   return (
     <div className="dashboard-page-data-grid">
-      <DataGrid columnDefs={columnDefs} data={rowData} />
+      <div className="dashboard-page-data-grid-wrapper">
+        <DataGrid
+          columnDefs={columnDefs}
+          data={rowData}
+          setGridApi={setGridApi}
+        />
+      </div>
+      <div className="dashboard-page-data-grid-btns-wrapper">
+        <Button
+          handleClick={deleteRow}
+          size={Sizes.small}
+          hierarchy={Hierarchy.secondary}
+          label="Delete Row"
+        />
+      </div>
     </div>
   )
 }

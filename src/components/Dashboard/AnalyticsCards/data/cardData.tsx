@@ -1,6 +1,6 @@
 import { BiCoinStack } from 'react-icons/bi'
 import { FaArrowAltCircleUp, FaUser } from 'react-icons/fa'
-import { Sizes } from '../../../UI/Card'
+import { Sizes } from '../../../../constants/enums'
 
 interface HomeCardData {
   header: string
