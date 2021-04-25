@@ -84,21 +84,4 @@ export const transactionsData: Transaction[] = [
       email: 'johnsmith@email.com',
     },
   },
-  {
-    transactionId: 6,
-    date: new Date(),
-    value: {
-      amount: 9.5,
-      currency: {
-        sym: '£',
-        name: 'GBP',
-      },
-    },
-    ref: 'vendork20s85jd',
-    selectedReward: '1 tree planted',
-    customer: {
-      id: 3,
-      email: 'andrewryan@email.com',
-    },
-  },
 ]
