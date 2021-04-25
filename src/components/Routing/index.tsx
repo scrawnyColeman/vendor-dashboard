@@ -6,11 +6,7 @@ import DashboardPage from '../Dashboard/Page'
 const Routing: React.FC = (): JSX.Element => {
   return (
     <Switch>
-      <Route
-        exact
-        path={['/', '/home', '/dashboard']}
-        component={DashboardPage}
-      />
+      <Route exact path="/home" component={DashboardPage} />
       <Route exact path="/payments" component={PaymentsPage} />
       <Redirect to="/home" />
     </Switch>
