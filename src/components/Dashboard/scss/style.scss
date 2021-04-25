@@ -1,0 +1,37 @@
+@import '../../../constants/scss/constants.scss';
+
+.dashboard-page-search-bar {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2rem 3rem;
+  color: #aeaeae;
+}
+.dashboard-page-welcome {
+  border-bottom: 1px solid #ccc;
+  padding: 2rem 3rem;
+}
+.dashboard-page-cards {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding: 2rem 3rem;
+}
+.dashboard-page-data-grid {
+  height: 400px;
+  border-bottom: 1px solid #ccc;
+  padding: 2rem 3rem;
+}
+
+.dashboard-page-api-keys {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #aeaeae;
+  border-radius: 8px;
+  color: #00bfa5;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
