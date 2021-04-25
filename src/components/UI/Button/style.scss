@@ -1,0 +1,37 @@
+.small-btn {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+.medium-btn {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.large-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+.xl-btn {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.primary-btn {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+.secondary-btn {
+  background-color: #eee;
+  color: #1e1e1e;
+}
+
+.btn {
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px #ccc;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px #ccc;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
