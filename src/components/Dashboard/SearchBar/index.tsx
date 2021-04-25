@@ -4,7 +4,12 @@ import { FaSearch } from 'react-icons/fa'
 const SearchBar: React.FC = (): JSX.Element => {
   return (
     <div className="dashboard-page-search-bar">
-      <FaSearch /> Search
+      <FaSearch />
+      <input
+        placeholder="Search"
+        type="text"
+        className="dashboard-page-search-input"
+      />
     </div>
   )
 }
