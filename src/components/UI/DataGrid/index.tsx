@@ -5,7 +5,7 @@ import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-material.css'
 import './style.scss'
 
-interface IProps {
+interface Props {
   data: {
     [key: string]: number | string | Date
   }[]
@@ -13,7 +13,7 @@ interface IProps {
   setGridApi?: (api: GridApi) => void
 }
 
-const DataGrid: React.FC<IProps> = ({
+const DataGrid: React.FC<Props> = ({
   data,
   columnDefs,
   setGridApi,
@@ -36,8 +36,6 @@ const DataGrid: React.FC<IProps> = ({
           rowSelection="single"
           defaultColDef={defaultColDef}
           columnDefs={columnDefs}
-          paginationAutoPageSize
-          pagination
         />
       </div>
     </div>
