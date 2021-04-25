@@ -21,7 +21,6 @@ interface Customer {
 
 interface Transaction {
   transactionId: number
-  date: Date
   value: TransactionAmount
   ref: string
   selectedReward: string

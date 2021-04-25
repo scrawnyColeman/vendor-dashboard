@@ -1,7 +1,6 @@
 export const transactionsData: Transaction[] = [
   {
     transactionId: 1,
-    date: new Date(),
     value: {
       amount: 10.5,
       currency: {
@@ -18,7 +17,6 @@ export const transactionsData: Transaction[] = [
   },
   {
     transactionId: 2,
-    date: new Date(),
     value: {
       amount: 23.6,
       currency: {
@@ -35,7 +33,6 @@ export const transactionsData: Transaction[] = [
   },
   {
     transactionId: 3,
-    date: new Date(),
     value: {
       amount: 12.35,
       currency: {
@@ -52,7 +49,6 @@ export const transactionsData: Transaction[] = [
   },
   {
     transactionId: 4,
-    date: new Date(),
     value: {
       amount: 28.4,
       currency: {
@@ -69,7 +65,6 @@ export const transactionsData: Transaction[] = [
   },
   {
     transactionId: 5,
-    date: new Date(),
     value: {
       amount: 34.4,
       currency: {
