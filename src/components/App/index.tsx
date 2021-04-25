@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import SideBar from '../Navigation/SideBar'
 import Routing from '../Routing'
 import './scss/style.scss'
