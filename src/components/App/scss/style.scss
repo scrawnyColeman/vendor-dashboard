@@ -1,8 +1,10 @@
-@import '../../../constants/scss/constants.scss';
+@import '../../../constants/variables.scss';
 
 .main-container {
   position: fixed;
   top: 0;
   left: $sideNavWidth;
   width: calc(100% - #{$sideNavWidth});
+  height: 100vh;
+  overflow: hidden;
 }

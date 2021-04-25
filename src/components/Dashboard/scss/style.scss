@@ -1,5 +1,9 @@
-@import '../../../constants/scss/constants.scss';
+@import '../../../constants/variables.scss';
 
+.dashboard-page-container {
+  height: 100%;
+  overflow: auto;
+}
 .dashboard-page-search-bar {
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -23,15 +27,45 @@
   border-bottom: 1px solid #ccc;
   padding: 2rem 3rem;
 }
+.dashboard-page-data-grid-wrapper {
+  height: 90%;
+  width: 100%;
+}
+.dashboard-page-data-grid-btns-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  height: 10%;
+}
 
 .dashboard-page-api-keys {
   margin-top: 2rem;
   padding: 1rem;
   border: 1px solid #aeaeae;
   border-radius: 8px;
-  color: #00bfa5;
-  line-height: 100%;
+}
+
+.dashboard-page-api-keys-header {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #00bfa5;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+.dashboard-page-api-keys-body {
+  padding: $primaryVerticalSpacing 0;
+}
+
+.dashboard-page-search-input {
+  all: unset;
+  width: 100%;
+  &::placeholder {
+    color: #aeaeae;
+  }
 }
