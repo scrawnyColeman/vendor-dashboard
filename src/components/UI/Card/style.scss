@@ -1,0 +1,64 @@
+@import '../../../constants/scss/constants.scss';
+
+.small-card-container {
+  flex: 1;
+  height: 96px;
+}
+
+.large-card-container {
+  flex: 100%;
+  margin: 0.5rem;
+  height: 400px;
+  position: relative;
+}
+
+.xl-card-container {
+  flex: 100%;
+  margin: 0.5rem;
+  height: 650px;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 3px 1px #aeaeae;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.card-content {
+  height: 100%;
+  border-radius: 0.5rem;
+}
+.card-header {
+  font-size: 0.8rem;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0 $primaryVerticalSpacing;
+  color: #aeaeae;
+}
+.card-header-label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card-header-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card-body {
+  display: flex;
+  align-items: flex-end;
+  padding: $primaryVerticalSpacing;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: calc(100% - 36px);
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+}
