@@ -6,14 +6,12 @@ import './scss/style.scss'
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <>
-      <Router>
-        <SideBar />
-        <div className="main-container">
-          <Routing />
-        </div>
-      </Router>
-    </>
+    <Router>
+      <SideBar />
+      <div className="main-container">
+        <Routing />
+      </div>
+    </Router>
   )
 }
 
