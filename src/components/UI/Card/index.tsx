@@ -1,12 +1,6 @@
 import React from 'react'
+import { Sizes } from '../../../constants/enums'
 import './style.scss'
-
-export enum Sizes {
-  small,
-  medium,
-  large,
-  xl,
-}
 
 interface IProps {
   header: string | JSX.Element
